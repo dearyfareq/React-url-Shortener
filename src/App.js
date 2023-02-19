@@ -1,7 +1,9 @@
+import Background from "./Background";
+
 function App() {
   return (
     <div className="App">
-      Hello World
+      <Background/>
     </div>
   );
 }
