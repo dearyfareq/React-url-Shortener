@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const Result = () => {
-    const [shortLink, SetShortLink] = useState(shortLink);
+const Result = ({inputValue} ) => {
+    const [shortLink, SetShortLink] = useState("");
+    console.log(inputValue)
   return (
     <div className='results'>
         <p>{shortLink}</p>
