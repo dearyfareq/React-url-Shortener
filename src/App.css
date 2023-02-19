@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 .container{
     display: flex;
@@ -36,6 +36,7 @@
     background-color: white;
     font-family:monospace;
     text-align: center;
+    border-radius: 10px;
 }
 .inputs>button{
     height: 3rem;
@@ -44,6 +45,7 @@
     color: white;
     font-family:monospace;
     transition: all 300ms ease-in-out;
+    border-radius: 10px;
 }
 .inputs>button:hover{
     height: 3rem;
@@ -51,4 +53,37 @@
     background-color: white;
     color: #3ab8fb;
     font-family:monospace
+}
+.results{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.results>p{
+    display: flex;
+    flex-direction: column;
+    font-family:monospace;
+    font-size: larger;
+    box-shadow: inset 0px 0px 0px 2px rgb(255, 255, 255);
+    height: 3rem;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.results>button{
+    height: 3rem;
+    border: none;
+    background-color: #ffffff;
+    color: #3ab8fb;
+    font-family:monospace;
+    transition: all 300ms ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.results>button:hover{
+    background-color: #3ab8fb;
+    color: #ffffff;
+    
 }
