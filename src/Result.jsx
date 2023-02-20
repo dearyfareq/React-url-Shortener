@@ -4,8 +4,6 @@ import axios from "axios";
 
 const Result = ({ inputValue }) => {
   const [shortLink, SetShortLink] = useState("");
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
   //console.log(inputValue)
   const getData = async () => {
     try {
@@ -14,31 +12,27 @@ const Result = ({ inputValue }) => {
       );
       SetShortLink(result.data.result.full_short_link);
     } catch (err) {
-      setError(err)
-    } finally {
-      setLoading(false);
+    } finally{
     }
   };
 
   useEffect(() => {
-    if(inputValue.length) {
+    if (inputValue.length) {
       getData();
     }
   }, [inputValue]);
 
-  if(loading) {
-    return <p className="noData">Loading...</p>
-  }
-  if(error) {
-    return <p className="noData">Something went wrong :(</p>
-  }
   return (
-    <div className="results">
-      <p>{shortLink}</p>
-      <CopyToClipboard text={shortLink}>
-        <button>Copy to Clipboard</button>
-      </CopyToClipboard>
-    </div>
+    <>
+      {shortLink && (
+        <div className="results">
+          <p>{shortLink}</p>
+          <CopyToClipboard text={shortLink}>
+            <button>Copy to Clipboard</button>
+          </CopyToClipboard>
+        </div>
+      )}
+    </>
   );
 };
 
