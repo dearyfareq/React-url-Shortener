@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Header = ({setInputValue}) => {
     const [value, setValue] = useState("");
-
+    //onclick, the function takes the value inside the input and then uses the useState function from results.jsx to update the value to the input value
     const handleFunction = () =>{
         setInputValue(value);
         setValue("")

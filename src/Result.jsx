@@ -16,6 +16,8 @@ const Result = ({ inputValue }) => {
     }
   };
 
+  //whenever the input value is changed, and there is length to the input( it exists ), play the function getData
+  //getData is an async function that awaits a returned value from the axios api, and then try to set the short link to the result 
   useEffect(() => {
     if (inputValue.length) {
       getData();
